@@ -1,0 +1,340 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{EB1E89B2-5AB7-433C-A089-ACC1BB3F63FA}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>BTL</RootNamespace>
+    <AssemblyName>BTL</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EPPlus, Version=7.0.5.0, Culture=neutral, PublicKeyToken=ea159fdaa78159a1, processorArchitecture=MSIL">
+      <HintPath>..\packages\EPPlus.7.0.5\lib\net462\EPPlus.dll</HintPath>
+    </Reference>
+    <Reference Include="EPPlus.Interfaces, Version=6.1.1.0, Culture=neutral, PublicKeyToken=a694d7f3b0907a61, processorArchitecture=MSIL">
+      <HintPath>..\packages\EPPlus.Interfaces.6.1.1\lib\net462\EPPlus.Interfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="EPPlus.System.Drawing, Version=6.1.1.0, Culture=neutral, PublicKeyToken=2308d35469c9bac0, processorArchitecture=MSIL">
+      <HintPath>..\packages\EPPlus.System.Drawing.6.1.1\lib\net462\EPPlus.System.Drawing.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.IO.RecyclableMemoryStream, Version=1.4.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.IO.RecyclableMemoryStream.1.4.1\lib\net46\Microsoft.IO.RecyclableMemoryStream.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Office.Interop.Excel.15.0.4795.1001\lib\net20\Microsoft.Office.Interop.Excel.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Annotations, Version=4.2.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ComponentModel.Annotations.5.0.0\lib\net461\System.ComponentModel.Annotations.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Threading.Tasks" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="custom\customBTN.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="custom\CustomRadioButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="custom\CustomTextBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="custom\CustomTextBox.Designer.cs">
+      <DependentUpon>CustomTextBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Nghia\DSDen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Nghia\DSDen.designer.cs">
+      <DependentUpon>DSDen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Nghia\KHBT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Nghia\KHBT.designer.cs">
+      <DependentUpon>KHBT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Nghia\KHTT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Nghia\KHTT.designer.cs">
+      <DependentUpon>KHTT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Nghia\QLKhachHang1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Nghia\QLKhachHang1.Designer.cs">
+      <DependentUpon>QLKhachHang1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Trung\Form2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Trung\Form2.designer.cs">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Trung\Form3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Trung\Form3.designer.cs">
+      <DependentUpon>Form3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Trung\Form4.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Trung\Form4.designer.cs">
+      <DependentUpon>Form4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Trung\Form6.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Trung\Form6.designer.cs">
+      <DependentUpon>Form6.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Trung\TRUNG.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Trung\TRUNG.designer.cs">
+      <DependentUpon>TRUNG.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Truong24\TRUONG.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Truong24\TRUONG.designer.cs">
+      <DependentUpon>TRUONG.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Truong24\TRUONG2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Truong24\TRUONG2.designer.cs">
+      <DependentUpon>TRUONG2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Truong24\TRUONG3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Truong24\TRUONG3.designer.cs">
+      <DependentUpon>TRUONG3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Truong24\frmLoaihh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Truong24\frmLoaihh.designer.cs">
+      <DependentUpon>frmLoaihh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Phu24\Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Phu24\Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Phu24\NhapXuat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Phu24\NhapXuat.Designer.cs">
+      <DependentUpon>NhapXuat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tao24\Phanca.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tao24\Phanca.designer.cs">
+      <DependentUpon>Phanca.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Phu24\QLTK.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Phu24\QLTK.Designer.cs">
+      <DependentUpon>QLTK.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tao24\Quanlynv.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tao24\Quanlynv.designer.cs">
+      <DependentUpon>Quanlynv.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Phu24\SignUp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Phu24\SignUp.Designer.cs">
+      <DependentUpon>SignUp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tao24\Thongtinnv.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tao24\Thongtinnv.designer.cs">
+      <DependentUpon>Thongtinnv.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tao24\Tinhluongnv.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tao24\Tinhluongnv.designer.cs">
+      <DependentUpon>Tinhluongnv.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Phu24\Trangchu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Phu24\Trangchu.Designer.cs">
+      <DependentUpon>Trangchu.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="custom\CustomTextBox.resx">
+      <DependentUpon>CustomTextBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Nghia\DSDen.resx">
+      <DependentUpon>DSDen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Nghia\KHBT.resx">
+      <DependentUpon>KHBT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Nghia\KHTT.resx">
+      <DependentUpon>KHTT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Nghia\QLKhachHang1.resx">
+      <DependentUpon>QLKhachHang1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Trung\Form2.resx">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Trung\Form3.resx">
+      <DependentUpon>Form3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Trung\Form4.resx">
+      <DependentUpon>Form4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Trung\Form6.resx">
+      <DependentUpon>Form6.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Trung\TRUNG.resx">
+      <DependentUpon>TRUNG.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Truong24\TRUONG.resx">
+      <DependentUpon>TRUONG.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Truong24\TRUONG2.resx">
+      <DependentUpon>TRUONG2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Truong24\TRUONG3.resx">
+      <DependentUpon>TRUONG3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Truong24\frmLoaihh.resx">
+      <DependentUpon>frmLoaihh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Phu24\Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Phu24\NhapXuat.resx">
+      <DependentUpon>NhapXuat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tao24\Phanca.resx">
+      <DependentUpon>Phanca.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Phu24\QLTK.resx">
+      <DependentUpon>QLTK.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tao24\Quanlynv.resx">
+      <DependentUpon>Quanlynv.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Phu24\SignUp.resx">
+      <DependentUpon>SignUp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tao24\Thongtinnv.resx">
+      <DependentUpon>Thongtinnv.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tao24\Tinhluongnv.resx">
+      <DependentUpon>Tinhluongnv.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Phu24\Trangchu.resx">
+      <DependentUpon>Trangchu.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="..\.editorconfig">
+      <Link>.editorconfig</Link>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\anh nhóm.png" />
+    <Content Include="Resources\icon search.jpg" />
+    <Content Include="Resources\icons8-bill-94.png" />
+    <Content Include="Resources\icons8-excel-48.png" />
+    <Content Include="Resources\icons8-excel-481.png" />
+    <Content Include="Resources\icons8-gifts-64.png" />
+    <Content Include="Resources\icons8-logout-40.png" />
+    <Content Include="Resources\icons8-ok-40.png" />
+    <Content Include="Resources\icons8-plus-40.png" />
+    <Content Include="Resources\icons8-random-48.png" />
+    <Content Include="Resources\icons8-reset-40.png" />
+    <Content Include="Resources\icons8-trash-can-40.png" />
+    <Content Include="Resources\mo-sieu-thi-mini-o-chung-cu.jpeg" />
+    <Content Include="Resources\Search.png" />
+    <Content Include="Resources\sieu thi.jpg" />
+    <Content Include="Resources\sieu thi1.jpg" />
+    <None Include="Resources\st.jpg" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
